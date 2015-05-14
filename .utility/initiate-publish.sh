@@ -3,7 +3,7 @@
 
 if [ "$TRAVIS_REPO_SLUG" == "PalomaMobile/android-db-migration" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
   if [[ $(gradle -q getVersion) != *SNAPSHOT* ]]; then
-      echo 'Travis can only publish snapshots.'
+      echo 'Travis can only publish snapshots now. Release publish coming soon..'
       return 0
   fi
 
