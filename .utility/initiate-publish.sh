@@ -2,7 +2,7 @@
 # This script initiates the Gradle publishing task when pushes to master occur.
 
 if [ "$TRAVIS_REPO_SLUG" == "PalomaMobile/android-db-migration" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
-  if [[ $(./gradlew -q getVersion) != *SNAPSHOT* ]]; then
+  if [[ $(./gradle -q getVersion) != *SNAPSHOT* ]]; then
       echo 'Travis can only publish snapshots.'
       return 0
   fi

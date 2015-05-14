@@ -21,4 +21,4 @@ env:
 before_install:
  - chmod a+x .utility/initiate-publish.sh
 after_success:
-- .utility/initiate-publish.sh
+- gradle uploadArchives
