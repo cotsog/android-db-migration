@@ -25,5 +25,6 @@ before_install:
 - chmod a+x .utility/initiate-publish.sh
 - openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in .utility/secring.gpg.enc -out .utility/generated.secring.gpg -d
 - openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in .utility/pubring.gpg.enc -out .utility/generated.pubring.gpg -d
+- find $PWD | grep "generated.secring.gpg"
 after_success:
 - ".utility/initiate-publish.sh"
