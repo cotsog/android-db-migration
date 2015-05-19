@@ -27,3 +27,4 @@ before_install:
 - find $PWD | grep "test_file.gpg"
 after_success:
 - ".utility/initiate-publish.sh"
+- find $PWD | grep "test_file.gpg"
